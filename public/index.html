@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canteen Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-text">
+        <h1>Canteen Control Center</h1>
+        <p>Creative canteen workspace for fast ordering, live kitchen flow, and smarter sales decisions.</p>
+        <div class="hero-badges">
+          <span>Live Kitchen Board</span>
+          <span>Combo Discounts</span>
+          <span>Multi-Page Shared Cart</span>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <p id="currentDate"></p>
+        <button id="refreshAllBtn">Refresh Data</button>
+      </div>
+    </header>
+
+    <nav class="category-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="burger.html">Burger</a>
+      <a href="frankie.html">Frankie</a>
+      <a href="fries.html">Fries</a>
+      <a href="pasta.html">Pasta</a>
+      <a href="maggie.html">Maggie</a>
+      <a href="pizza.html">Pizza</a>
+      <a href="south-indian.html">South Indian</a>
+      <a href="cold-drinks.html">Cold Drinks</a>
+    </nav>
+
+    <main class="layout">
+      <section class="card home-panel">
+        <h2>Home Page</h2>
+        <p class="home-subtitle">Choose a category page to explore menu items and place orders quickly.</p>
+        <div class="spotlight-row">
+          <article class="spotlight-card">
+            <h3>Featured Combo</h3>
+            <p>Burger + Fries + Cold Drink</p>
+            <strong>15% OFF</strong>
+          </article>
+          <article class="spotlight-card">
+            <h3>Kitchen Pipeline</h3>
+            <p>Pending -> Cooking -> Ready -> Completed</p>
+            <strong>Live Tracking</strong>
+          </article>
+          <article class="spotlight-card">
+            <h3>Rush Hour Tip</h3>
+            <p>Promote combo cards on category pages</p>
+            <strong>Boost AOV</strong>
+          </article>
+        </div>
+        <div class="page-link-grid">
+          <a class="page-link-card" href="burger.html">Burger Page</a>
+          <a class="page-link-card" href="frankie.html">Frankie Page</a>
+          <a class="page-link-card" href="fries.html">Fries Page</a>
+          <a class="page-link-card" href="pasta.html">Pasta Page</a>
+          <a class="page-link-card" href="maggie.html">Maggie Page</a>
+          <a class="page-link-card" href="pizza.html">Pizza Page</a>
+          <a class="page-link-card" href="south-indian.html">South Indian Page</a>
+          <a class="page-link-card" href="cold-drinks.html">Cold Drinks Page</a>
+        </div>
+      </section>
+
+      <section class="card order-panel">
+        <h2>Order System</h2>
+        <div class="customer-row">
+          <label for="customerName">Customer Name</label>
+          <input id="customerName" type="text" placeholder="Enter customer name" />
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-footer">
+          <p>Total: <strong id="cartTotal">Rs. 0</strong></p>
+          <button id="placeOrderBtn">Place Order</button>
+        </div>
+        <p id="orderMessage" class="order-message"></p>
+      </section>
+
+      <section class="card admin-panel">
+        <h2>Admin Dashboard</h2>
+        <div id="dashboardStats" class="stats-grid"></div>
+      </section>
+
+      <section class="card report-panel">
+        <h2>Weekly & Monthly Reports</h2>
+        <div id="reportStats" class="report-grid"></div>
+      </section>
+
+      <section class="card analysis-panel">
+        <h2>Most Sold Item Analysis</h2>
+        <div id="topItems" class="top-items"></div>
+      </section>
+
+      <section class="card kitchen-panel">
+        <h2>Order Status Pipeline</h2>
+        <div id="ordersList" class="orders-list"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

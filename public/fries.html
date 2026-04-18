@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fries Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-category="Fries">
+    <header class="hero">
+      <div class="hero-text">
+        <h1 id="pageTitle">Fries Page</h1>
+        <p>Browse all fries items and place your order.</p>
+      </div>
+      <div class="hero-meta">
+        <p id="currentDate"></p>
+        <a class="link-btn" href="index.html">Back to Dashboard</a>
+      </div>
+    </header>
+
+    <nav class="category-nav">
+      <a href="index.html">Home</a>
+      <a href="burger.html">Burger</a>
+      <a href="frankie.html">Frankie</a>
+      <a href="fries.html" class="active">Fries</a>
+      <a href="pasta.html">Pasta</a>
+      <a href="maggie.html">Maggie</a>
+      <a href="pizza.html">Pizza</a>
+      <a href="south-indian.html">South Indian</a>
+      <a href="cold-drinks.html">Cold Drinks</a>
+    </nav>
+
+    <main class="category-layout">
+      <section class="card">
+        <h2 id="categoryName">Fries</h2>
+        <div id="menuGrid" class="menu-grid"></div>
+      </section>
+
+      <section class="card">
+        <h2>Order System</h2>
+        <div class="customer-row">
+          <label for="customerName">Customer Name</label>
+          <input id="customerName" type="text" placeholder="Enter customer name" />
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-footer">
+          <p>Total: <strong id="cartTotal">Rs. 0</strong></p>
+          <button id="placeOrderBtn">Place Order</button>
+        </div>
+        <p id="orderMessage" class="order-message"></p>
+      </section>
+    </main>
+
+    <script src="category.js"></script>
+  </body>
+</html>
